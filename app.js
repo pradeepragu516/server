@@ -114,7 +114,7 @@ app.delete("/api/expenses/:id", async (req, res) => {
     res.status(200).json(deleteExpense);
 });
 
-const mongourl = "mongodb://localhost:27017/practice"
+const mongourl = "mongodb+srv://pradeepragu:Pradeep.ragu16@cluster0.15ndn.mongodb.net/test"
 mongoose.connect(mongourl) .then(() => {
     console.log("mongodb connected")
     app.listen(PORT, () => {
