@@ -114,6 +114,11 @@ app.delete("/api/expenses/:id", async (req, res) => {
     res.status(200).json(deleteExpense);
 });
 
+app.delete("/api/expense",async(req,res)=>{
+    const deleteAll = await expenseModel.deleteMany();
+    res.status(200).json(deleteAll);
+})
+
 const mongourl = "mongodb+srv://pradeepragu:Pradeep.ragu16@cluster0.15ndn.mongodb.net/test"
 mongoose.connect(mongourl) .then(() => {
     console.log("mongodb connected")
