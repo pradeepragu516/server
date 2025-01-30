@@ -19,7 +19,7 @@ mongoose.connect(mongourl)
     title: { type: String, required: true },
     amount: { type: Number, required: true },
  });
- const expenseModel = mongoose.model('expense-tracker', expenseSchema);//collection name, schema name
+ const expenseModel = mongoose.model('expense-trackers', expenseSchema);//collection name, schema name
 app.post("/api/expense", async (req, res) => {
     const { title, amount } = req.body;
     const newExpense = new expenseModel({
