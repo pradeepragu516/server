@@ -210,7 +210,7 @@ function authenticateToken(req, res, next) {
   });
 
 
-const mongourl = "mongodb+srv://pradeepragu:<db_password>@cluster0.15ndn.mongodb.net/practice"
+const mongourl = "mongodb+srv://pradeepragu:Pradeep.ragu16@cluster0.15ndn.mongodb.net/practice"
 mongoose.connect(mongourl) .then(() => {
     console.log("mongodb connected")
     app.listen(PORT, () => {
