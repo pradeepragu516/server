@@ -16,6 +16,8 @@ const { v4: uuidv4 } = require('uuid');
 const PORT= 8000;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
+app.use(cor());
 
 
     //  const students=[
@@ -208,7 +210,7 @@ function authenticateToken(req, res, next) {
   });
 
 
-const mongourl = "your url"
+const mongourl = "mongodb+srv://pradeepragu:<db_password>@cluster0.15ndn.mongodb.net/practice"
 mongoose.connect(mongourl) .then(() => {
     console.log("mongodb connected")
     app.listen(PORT, () => {
